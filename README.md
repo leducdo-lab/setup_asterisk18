@@ -1,17 +1,20 @@
 ### Mục lục
-[I. Giới thiệu về Asterisk]#Modau
-[II. Hướng dẫn cài đặt trên ubuntu]#caidat
+[I. Giới thiệu về Asterisk](#Modau)
+
+[II. Hướng dẫn cài đặt trên ubuntu](#caidat)
 - [1. Cập nhật hệ thống](#buoc1)
 - [2. Cài đặt Build Dependencies](#buoc2)
 - [3. Tải asterisk 18 lts và giải nén](#buoc3)
 - [4. Xây dựng và cài đặt asterisk](#buoc4)
 - [5. Chạy asterisk service ](#buoc5)
+
 ====================================================================
 
 <a name="Modau"></a>
 
 ## I. Giới thiệu về [Asterisk](https://www.asterisk.org/get-started/) 
 `asterisk` là một phần mềm mã nguồn mở, do Mark Spencer viết ra. Với mục đích tạo nên một hệ thống tổng đài cá nhân (PBX-private branch exchange) kết nối tới IP, PSTN. Sử dụng các chuẩn như SIP, MGCP, H323, IAX.
+
 `asterisk version 18 LTS` có hỗ trợ thêm cho các giao thức STIR / SHAKEN để chống giả mạo ID người gọi. Hỗ trợ cả việc gửi tiêu đề và bảo đảm danh tính cho các cuộc gọi đi.
 
 <a name="caidat"></a>
@@ -73,28 +76,31 @@ Kết quả:
 
 Chạy lệnh kiểm tra cấu hình
 ```
-# ./configure
+# sudo ./configure
 ```
 
 Thiết lập tuỳ chọn menu
 ```
-# make menuselect
+# sudo make menuselect
 ```
 
 Sử dụng mũi tên để điều hướng và **Enter** để chọn 
 
-Chọn Addons như ảnh:
+Chọn Add-ons như ảnh:
+
 ![menuselect](https://computingforgeeks.com/wp-content/uploads/2018/08/install-asterisk-ubuntu-18.04-01-min.png?ezimgfmt=rs:640x197/rscb23/ng:webp/ngcb23)
 
 Chọn các Core sound muốn sử dụng:
+
 ![menuselect](https://computingforgeeks.com/wp-content/uploads/2018/08/install-asterisk-ubuntu-18.04-02-min.png?ezimgfmt=rs:640x349/rscb23/ng:webp/ngcb23)
 
 Khi hoàn tất hãy chạy lệnh sau:
 ```
-# make
+# sudo make
 ```
 
 Kết quả thành công:
+
 ```
 +--------- Asterisk Build Complete ---------+
  + Asterisk has successfully been built, and +
