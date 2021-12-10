@@ -76,12 +76,12 @@ Kết quả:
 
 Chạy lệnh kiểm tra cấu hình
 ```
-# ./configure
+# sudo ./configure
 ```
 
 Thiết lập tuỳ chọn menu
 ```
-# make menuselect
+# sudo make menuselect
 ```
 
 Sử dụng mũi tên để điều hướng và **Enter** để chọn 
