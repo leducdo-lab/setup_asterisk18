@@ -7,6 +7,7 @@
 - [3. Tải asterisk 18 lts và giải nén](#buoc3)
 - [4. Xây dựng và cài đặt asterisk](#buoc4)
 - [5. Chạy asterisk service ](#buoc5)
+
 ====================================================================
 
 <a name="Modau"></a>
