@@ -174,5 +174,22 @@ Kiểm tra trạng thái của asterisk
 
 Kiểm tra kết nối:
 ```
-# $ sudo asterisk -rvv
+$ sudo asterisk -rvv
+
+Asterisk 18.1.1, Copyright (C) 1999 - 2018, Digium, Inc. and others.
+ Created by Mark Spencer markster@digium.com
+ Asterisk comes with ABSOLUTELY NO WARRANTY; type 'core show warranty' for details.
+ This is free software, with components licensed under the GNU General Public
+ License version 2 and other licenses; you are welcome to redistribute it under
+ certain conditions. Type 'core show license' for details.
+ Running as user 'asterisk'
+ Running under group 'asterisk'
+ Connected to Asterisk 18.1.1 currently running on asterisk (pid = 107650)
+ asterisk*CLI>
 ```
+
+Config các file sip.conf, extensions.conf, voiceemail.conf
+
+
+
+
