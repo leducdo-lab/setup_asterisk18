@@ -14,6 +14,7 @@
 
 ## I. Giới thiệu về [Asterisk](https://www.asterisk.org/get-started/) 
 `asterisk` là một phần mềm mã nguồn mở, do Mark Spencer viết ra. Với mục đích tạo nên một hệ thống tổng đài cá nhân (PBX-private branch exchange) kết nối tới IP, PSTN. Sử dụng các chuẩn như SIP, MGCP, H323, IAX.
+
 `asterisk version 18 LTS` có hỗ trợ thêm cho các giao thức STIR / SHAKEN để chống giả mạo ID người gọi. Hỗ trợ cả việc gửi tiêu đề và bảo đảm danh tính cho các cuộc gọi đi.
 
 <a name="caidat"></a>
