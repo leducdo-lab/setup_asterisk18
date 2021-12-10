@@ -1,5 +1,6 @@
 ### Mục lục
 [I. Giới thiệu về Asterisk](#Modau)
+
 [II. Hướng dẫn cài đặt trên ubuntu](#caidat)
 - [1. Cập nhật hệ thống](#buoc1)
 - [2. Cài đặt Build Dependencies](#buoc2)
