@@ -86,18 +86,21 @@ Thiết lập tuỳ chọn menu
 
 Sử dụng mũi tên để điều hướng và **Enter** để chọn 
 
-Chọn Addons như ảnh:
+Chọn Add-ons như ảnh:
+
 ![menuselect](https://computingforgeeks.com/wp-content/uploads/2018/08/install-asterisk-ubuntu-18.04-01-min.png?ezimgfmt=rs:640x197/rscb23/ng:webp/ngcb23)
 
 Chọn các Core sound muốn sử dụng:
+
 ![menuselect](https://computingforgeeks.com/wp-content/uploads/2018/08/install-asterisk-ubuntu-18.04-02-min.png?ezimgfmt=rs:640x349/rscb23/ng:webp/ngcb23)
 
 Khi hoàn tất hãy chạy lệnh sau:
 ```
-# make
+# sudo make
 ```
 
 Kết quả thành công:
+
 ```
 +--------- Asterisk Build Complete ---------+
  + Asterisk has successfully been built, and +
