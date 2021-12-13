@@ -18,6 +18,7 @@
 - [7. Tải và cài đặt asterisk](#buoc7_2)
 
 [IV. Config các file sip.conf, extensions.conf, voiceemail.conf](#config)
+[V. Tải zoiper 5 và cài đặt](#zoiper5)
 
 ====================================================================
 
@@ -350,3 +351,33 @@ sudo nano voiceemail.conf
 ```
   externip=3.138.198.148 (Public IPv4 address của Instances)
 ```
+
+<a name="zoiper5"></a>
+
+## V. Tải zoiper 5 và cài đặt
+
+Zoiper 5 có đầy đủ phiên bản trên PC và mobile
+
+Tải theo đường link bên dưới:
+```
+ https://www.zoiper.com/en/voip-softphone/download/current
+```
+- Mobile:
+ - Mở ứng dụng chọn 'Continue as a Free user'
+ - Chọn 'Settings'
+ - Chọn 'Account'
+ - Chọn dấu cộng '+'
+ - Chọn 'Yes'
+ - Chọn Manual configuration
+ - Chọn SIP account
+ - Nhập các thông tin như ảnh sau:
+
+
+- PC:
+ - Mở ứng dụng chọn 'Continue as a Free user'
+ - Chọn biểu tượng bánh răng
+ - Chọn Account
+ - Nhập thông tin giống ảnh sau:
+
+
+
