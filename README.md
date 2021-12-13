@@ -16,7 +16,6 @@
 - [5. Tải và cài đặt Jansson](#buoc5_2)
 - [6. Tải và cài đặt PJSIP](#buoc6_2)
 - [7. Tải và cài đặt asterisk](#buoc7_2)
-
 [IV. Config các file sip.conf, extensions.conf, voiceemail.conf](#config)
 ====================================================================
 
