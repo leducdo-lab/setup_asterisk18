@@ -24,44 +24,44 @@
 
 ### 1. Cập nhật hệ thống
 ```
-# sudo apt update
-# sudo apt -y upgrade
+ sudo apt update
+ sudo apt -y upgrade
 ```
 Khởi động lại hệ thống ubuntu
 ``` 
-# sudo systemctl reboot
+ sudo systemctl reboot
 ```
 <a name="buoc2"></a>
 
 ### 2. Cài đặt Build Dependencies
 ```
-# sudo apt update
-# sudo add-apt-repository universe
-# sudo apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
+ sudo apt update
+ sudo add-apt-repository universe
+ sudo apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
 ```
 <a name="buoc3"></a>
 
 ### 3. Tải asterisk 18 lts và giải nén
 Tải asterisk:  
 ```
-# cd ~
-# wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
+ cd ~
+ wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
 ```
 
 Giải nén:
 ```
-# tar xvf asterisk-18-current.tar.gz
+ tar xvf asterisk-18-current.tar.gz
 ```
 
 Tải np3 decoder
 ```
-# cd asterisk-18*/
-# contrib/scripts/get_mp3_source.sh
+ cd asterisk-18*/
+ contrib/scripts/get_mp3_source.sh
 ```
 
 Kiểm tra đã tải toàn bộ dependencies:
 ```
-# sudo contrib/scripts/install_prereq install
+ sudo contrib/scripts/install_prereq install
 ```
 
 Kết quả:
@@ -76,12 +76,12 @@ Kết quả:
 
 Chạy lệnh kiểm tra cấu hình
 ```
-# sudo ./configure
+ sudo ./configure
 ```
 
 Thiết lập tuỳ chọn menu
 ```
-# sudo make menuselect
+ sudo make menuselect
 ```
 
 Sử dụng mũi tên để điều hướng và **Enter** để chọn 
@@ -96,7 +96,7 @@ Chọn các Core sound muốn sử dụng:
 
 Khi hoàn tất hãy chạy lệnh sau:
 ```
-# sudo make
+ sudo make
 ```
 
 Kết quả thành công:
@@ -112,19 +112,19 @@ Kết quả thành công:
 
 Lệnh chạy để cài đặt:
 ```
-# sudo make install
+ sudo make install
 ```
 
 Có thể tuỳ chọn cài đặt thêm:
 ```
-# sudo make progdocs
+ sudo make progdocs
 ```
 
 Cuối cùng cài đặt config và samples
 ```
-# sudo make samples
-# sudo make config
-# sudo ldconfig
+ sudo make samples
+ sudo make config
+ sudo ldconfig
 ```
 <a name="buoc4"></a>
 
@@ -132,36 +132,38 @@ Cuối cùng cài đặt config và samples
 
 Tạo người dùng và nhóm người dùng:
 ```
-# sudo groupadd asterisk
-# sudo useradd -r -d /var/lib/asterisk -g asterisk asterisk
-# sudo usermod -aG audio,dialout asterisk
-# sudo chown -R asterisk.asterisk /etc/asterisk
-# sudo chown -R asterisk.asterisk /var/{lib,log,spool}/asterisk
-# sudo chown -R asterisk.asterisk /usr/lib/asterisk
+ sudo groupadd asterisk
+ sudo useradd -r -d /var/lib/asterisk -g asterisk asterisk
+ sudo usermod -aG audio,dialout asterisk
+ sudo chown -R asterisk.asterisk /etc/asterisk
+ sudo chown -R asterisk.asterisk /var/{lib,log,spool}/asterisk
+ sudo chown -R asterisk.asterisk /usr/lib/asterisk
 ```
 
 Tạo người dùng mặc định cho asterisk
 ```
-# $ sudo vim /etc/default/asterisk
-# AST_USER="asterisk"
-# AST_GROUP="asterisk"
-# $ sudo vim /etc/asterisk/asterisk.conf
-# runuser = asterisk ; The user to run as.
-# rungroup = asterisk ; The group to run as.
+ $ sudo vim /etc/default/asterisk
+ (Tìm tới vị trí có hai câu lệnh dưới)
+ AST_USER="asterisk"
+ AST_GROUP="asterisk"
+ $ sudo vim /etc/asterisk/asterisk.conf
+  (Tìm tới vị trí có hai câu lệnh dưới)
+ runuser = asterisk ; The user to run as.
+ rungroup = asterisk ; The group to run as.
 ```
 
 Chạy lại asterisk:
 ```
-# sudo systemctl restart asterisk
+ sudo systemctl restart asterisk
 ```
 
 Bật asterisk:
 ```
-# sudo systemctl enable asterisk
+ sudo systemctl enable asterisk
 ```
 Kiểm tra trạng thái của asterisk
 ```
-# $ systemctl status asterisk
+ $ systemctl status asterisk
 ● asterisk.service - LSB: Asterisk PBX
      Loaded: loaded (/etc/init.d/asterisk; generated)
      Active: active (running) since Fri 2020-08-14 12:04:41 CEST; 9s ago
@@ -188,7 +190,31 @@ Asterisk 18.1.1, Copyright (C) 1999 - 2018, Digium, Inc. and others.
  asterisk*CLI>
 ```
 
-Config các file sip.conf, extensions.conf, voiceemail.conf
+### Config các file sip.conf, extensions.conf, voiceemail.conf
+
+Đi tới vị trí chưa asterisk:
+
+```
+ cd /etc/asterisk
+```
+
+Backup dữ liệu:
+
+```
+ sudo mv sip.conf sip.conf.backup
+ sudo mv extensions.conf extensions.conf.backup
+ sudo mv voiceemail.conf voiceemail.conf.backup
+```
+
+Tạo file mới (nội dung giống các file bên trên):
+
+```
+sudo nano sip.conf
+sudo nano extensions.conf
+sudo nano voiceemail.conf
+```
+
+
 
 
 
