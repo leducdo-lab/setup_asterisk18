@@ -372,6 +372,7 @@ Tải theo đường link bên dưới:
  - Chọn SIP account
  - Nhập các thông tin như ảnh sau:
 ![markdown](https://i.ibb.co/BPxhsf9/PC.png)
+
 Password: là secret trong file sip.conf
 
 - PC:
