@@ -372,6 +372,7 @@ Tải theo đường link bên dưới:
  - Chọn SIP account
  - Nhập các thông tin như ảnh sau:
 
+![markdown](./img/PC.png)
 
 - PC:
  - Mở ứng dụng chọn 'Continue as a Free user'
@@ -379,5 +380,5 @@ Tải theo đường link bên dưới:
  - Chọn Account
  - Nhập thông tin giống ảnh sau:
 
-
+![markdown](./img/PC.png)
 
