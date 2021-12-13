@@ -371,8 +371,8 @@ Tải theo đường link bên dưới:
  - Chọn Manual configuration
  - Chọn SIP account
  - Nhập các thông tin như ảnh sau:
-
 ![markdown](https://i.ibb.co/BPxhsf9/PC.png)
+Password: là secret trong file sip.conf
 
 - PC:
  - Mở ứng dụng chọn 'Continue as a Free user'
@@ -382,3 +382,4 @@ Tải theo đường link bên dưới:
 
 ![markdown](https://i.ibb.co/BPxhsf9/PC.png)
 
+Password: là secret trong file sip.conf
