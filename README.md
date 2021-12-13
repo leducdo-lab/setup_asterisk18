@@ -55,18 +55,30 @@ Khởi động lại hệ thống ubuntu
 Tải asterisk:  
 ```
  cd ~
+<<<<<<< HEAD
  sudo wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
+=======
+ wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
+>>>>>>> b3439634580a1cc9fd81ac5d6fa27aa96967d49a
 ```
 
 Giải nén:
 ```
+<<<<<<< HEAD
  sudo tar xvf asterisk-18-current.tar.gz
+=======
+ tar xvf asterisk-18-current.tar.gz
+>>>>>>> b3439634580a1cc9fd81ac5d6fa27aa96967d49a
 ```
 
 Tải np3 decoder
 ```
  cd asterisk-18*/
+<<<<<<< HEAD
  sudo contrib/scripts/get_mp3_source.sh
+=======
+ contrib/scripts/get_mp3_source.sh
+>>>>>>> b3439634580a1cc9fd81ac5d6fa27aa96967d49a
 ```
 
 Kiểm tra đã tải toàn bộ dependencies:
@@ -154,12 +166,21 @@ Tạo người dùng mặc định cho asterisk
 ```
  $ sudo vim /etc/default/asterisk
  (Tìm tới vị trí có hai câu lệnh dưới)
+<<<<<<< HEAD
   AST_USER="asterisk"
   AST_GROUP="asterisk"
  $ sudo vim /etc/asterisk/asterisk.conf
  (Tìm tới vị trí có hai câu lệnh dưới)
   runuser = asterisk ; The user to run as.
   rungroup = asterisk ; The group to run as.
+=======
+ AST_USER="asterisk"
+ AST_GROUP="asterisk"
+ $ sudo vim /etc/asterisk/asterisk.conf
+  (Tìm tới vị trí có hai câu lệnh dưới)
+ runuser = asterisk ; The user to run as.
+ rungroup = asterisk ; The group to run as.
+>>>>>>> b3439634580a1cc9fd81ac5d6fa27aa96967d49a
 ```
 
 Chạy lại asterisk:
@@ -174,7 +195,11 @@ Bật asterisk:
 Kiểm tra trạng thái của asterisk
 ```
  $ systemctl status asterisk
+<<<<<<< HEAD
   ● asterisk.service - LSB: Asterisk PBX
+=======
+● asterisk.service - LSB: Asterisk PBX
+>>>>>>> b3439634580a1cc9fd81ac5d6fa27aa96967d49a
      Loaded: loaded (/etc/init.d/asterisk; generated)
      Active: active (running) since Fri 2020-08-14 12:04:41 CEST; 9s ago
        Docs: man:systemd-sysv-generator(8)
@@ -200,6 +225,7 @@ Asterisk 18.1.1, Copyright (C) 1999 - 2018, Digium, Inc. and others.
  asterisk*CLI>
 ```
 
+<<<<<<< HEAD
 <a name="caidat2"></a>
 
 ## III. Hướng dẫn cài đặt trên Linux Amazon
@@ -269,6 +295,33 @@ Cập nhật lại thời gian:
 <a name="buoc3_2"></a>
 
 ### 3. Thêm EPEL
+=======
+### Config các file sip.conf, extensions.conf, voiceemail.conf
+
+Đi tới vị trí chưa asterisk:
+
+```
+ cd /etc/asterisk
+```
+
+Backup dữ liệu:
+
+```
+ sudo mv sip.conf sip.conf.backup
+ sudo mv extensions.conf extensions.conf.backup
+ sudo mv voiceemail.conf voiceemail.conf.backup
+```
+
+Tạo file mới (nội dung giống các file bên trên):
+
+```
+sudo nano sip.conf
+sudo nano extensions.conf
+sudo nano voiceemail.conf
+```
+
+
+>>>>>>> b3439634580a1cc9fd81ac5d6fa27aa96967d49a
 
 ```
   sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
